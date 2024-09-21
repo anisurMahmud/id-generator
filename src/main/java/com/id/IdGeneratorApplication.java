@@ -8,6 +8,7 @@ public class IdGeneratorApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(IdGeneratorApplication.class, args);
+		System.out.println("\"Hello Spring\"");
 	}
 
 }
