@@ -14,5 +14,11 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    private String name;
+    private String surname;
+    private String district;
+    private String city;
+    private String phone;
+    private String department;
 
 }
