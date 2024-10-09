@@ -1,11 +1,10 @@
 package com.id.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.List;
 
 @Entity
 @Getter
@@ -15,4 +14,8 @@ public class Location {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String location;
+    private String locationCode;
+
+    @OneToMany(mappedBy = "location")
+    private List<Employee> employee;
 }
