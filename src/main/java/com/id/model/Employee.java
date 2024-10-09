@@ -6,17 +6,21 @@ import lombok.Setter;
 
 @Entity
 @Getter
-@Setter
+
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String name;
+    @Setter
+    private String firstName;
+    @Setter
     private String surname;
-
+    @Setter
+    private String customId;
+    @Setter
     @ManyToOne(cascade = CascadeType.ALL)
     private Location location;
-
+    @Setter
     @ManyToOne(cascade = CascadeType.ALL)
     private Department department;
 }
